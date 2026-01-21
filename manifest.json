@@ -1,0 +1,15 @@
+{
+  "name": "PWA APP",
+  "short_name": "PWA APP",
+  "start_url": "/",
+  "description": "一个示例 PWA 应用，演示 manifest 配置",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "1000x1000",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait-primary"
+}
