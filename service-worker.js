@@ -38,3 +38,5 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
+
+console.log("Service Worker 全局对象", self);

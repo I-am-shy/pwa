@@ -1,3 +1,4 @@
+# PWA
 
 ## PWA Manifest 文件的核心结构
 
@@ -79,3 +80,20 @@ manifest.json 是一个 JSON 格式的文件，包含了 PWA 的元数据，浏�
 
 3. display: standalone 是最常用的显示模式，能让 PWA 拥有接近原生应用的体验，theme_color 和 background_color 则决定了应用的视觉一致性。
 
+## Service Worker
+
+Service Worker 是 PWA 的离线缓存机制，它可以在浏览器离线时提供服务，也可以在浏览器在线时提供服务。
+
+Service Worker 工作时，会监听网络请求，如果请求的资源在缓存中，则返回缓存中的资源，如果请求的资源不在缓存中，则请求网络资源，并缓存资源。即 缓存代替网络请求，保存应用离线使用。
+
+Service Worker 通常会配合 Caches API 或 IndexedDB 等本地存储机制一起使用，以实现离线缓存和数据持久化。
+
+### Service Worker 和 web worker 的区别
+
+| 特性	| Service Worker	| Web Worker |
+| --- | --- | --- |
+| 主要用途	| 离线缓存、网络代理、推送通知、后台同步	| 后台执行复杂计算，提高响应性 |
+| 网络访问	| 拦截、修改、响应网络请求 (fetch)	| 不能直接访问网络请求 |
+| DOM访问	| 无法直接访问 DOM	| 无法直接访问 DOM |
+| 生命周期	| 独立于页面，持续运行	| 随页面关闭而结束 |
+| 适用范围	| 整个域，服务多个页面	| 仅限创建它的页面 |
