@@ -20,6 +20,15 @@
         }
       });
     }
+    // 查看缓存内容
+    const CACHE_NAME = 'cache-v1';
+    caches.open(CACHE_NAME).then(cache => {
+      cache.keys().then(keys=>{
+        keys.forEach(async key=>{
+          console.log("缓存 key:",key,await cache.match(key));
+        });
+      })
+    });
   </script>
 </body>
 </html>

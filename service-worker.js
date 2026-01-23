@@ -1,5 +1,5 @@
 // 缓存名称（更新时修改名称，触发缓存更新）
-const CACHE_NAME = 'my-pwa-cache-v1';
+const CACHE_NAME = 'cache-v1';
 // 需要缓存的核心资源
 const CACHE_ASSETS = [
   '/',
